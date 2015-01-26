@@ -1,0 +1,80 @@
+---
+title: "Statistical Inference Course Project"
+author: "Javier Nieto"
+date: "Monday, January 12, 2015"
+output: pdf_document
+---
+
+# Part 2: Basic inferential data analysis
+
+Simple inferential data analysis
+---
+
+Now in the second part of the project, we analyze the ToothGrowth data in the R 
+datasets package and build a simple inferential data analysis.
+
+
+Setting up required environment in R
+---
+
+```{r,results='hide'}
+# Load libraries
+library(ggplot2)
+library(knitr)
+
+# Changing locale time to English
+Sys.setlocale("LC_TIME", "english")
+
+```
+
+Data
+---
+
+The data we use are ToothGrowth, which are the in the R datasets package. These 
+data contain information about the effect of vitamin C on tooth growth in guinea
+pigs.
+
+The response is the length of odontoblasts (teeth) in each of 10 guinea pigs at 
+each of three dose levels of Vitamin C (0.5, 1, and 2 mg) with each of two delivery
+methods (orange juice or ascorbic acid).
+
+Format
+
+A data frame with 60 observations on 3 variables.
+
+[,1]  len	numeric	Tooth length
+
+[,2]  supp factor Supplement type (VC or OJ).
+
+[,3]  dose numeric Dose in milligrams.
+
+
+Source
+
+C. I. Bliss (1952) The Statistics of Bioassay. Academic Press.
+
+
+Exploratory data analysis
+---
+
+```{r}
+require(graphics)
+coplot(len ~ dose | supp, data = ToothGrowth, panel = panel.smooth,
+       xlab = "ToothGrowth data: length vs dose, given type of supplement")
+```
+
+
+
+Basic summary of the data
+---
+
+
+Inferential data analysis
+---
+
+
+Conclusions
+---
+
+
+
