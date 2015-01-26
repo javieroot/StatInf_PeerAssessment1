@@ -56,7 +56,7 @@ simulaciones <- do.call(rbind, replicate(num_sim, rexp(n, lambda), simplify = F)
 promedios <- data.frame(x = rowMeans(simulaciones))
 ```
 
-Sample Measures versus theoretical measures
+Sample measures versus theoretical measures
 ---
 
 To show proximity between sample and theoretical averages we calculate it as following
